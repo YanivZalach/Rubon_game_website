@@ -6,7 +6,7 @@ import os
 
 
 # At this point in the code we have all the files content, now we will create the website
-creation_location = "../test_website"
+creation_location = "../website"
 
 
 # Getting the footer and header from the listed files
