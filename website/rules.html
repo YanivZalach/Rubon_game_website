@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>רובון המשחק</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -12,8 +12,9 @@
       <!-- The nav -->
       <nav>
         <!-- List of locations -->
-        <a href="index.html">רובון</a>
-        <ul>
+        <a id="NavHomeRubon" href="index.html">רובון</a>
+        <img id="NavHide" onclick="toggle_menu()" alt="menu" src="./assets/menu.png">
+        <ul id="NavList">
           <li> <a href="index.html">בית</a> </li>
           <li> <a href="rules.html">חוקים</a> </li>
           <li> <a href="myth.html">המיתולוגיה</a> </li>
@@ -21,7 +22,7 @@
           <li> <a href="contact-us.html">צרו קשר</a> </li>
         </ul>
         <!-- To the buying webpage -->
-        <a href="https://yanivd700.wixsite.com/rubon/the-game">קנו עכשיו</a>
+        <a id="NavBuyNow" href="https://yanivd700.wixsite.com/rubon/the-game">קנו עכשיו</a>
       </nav>
     </header>
 
@@ -30,6 +31,8 @@ rules
     <footer>
       <p>&copy;YANIV ZALACH</p>
     </footer>
+    <!-- For the intractive menu in the phone option -->
+    <script src="js/menu.js"></script>
   </body>
 </html>
 
