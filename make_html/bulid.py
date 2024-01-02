@@ -13,18 +13,18 @@ creation_location = "../test_website"
 wrapper = []
 
 try:
-    wrapper.append(open("./parts/wrappers/footer.html", "r").read())
-    print("The footer file was read")
-
-except FileNotFoundError:
-    print("Could not read the footer file")
-
-try:
     wrapper.append(open("./parts/wrappers/header.html", "r").read())
     print("The header file was read")
 
 except FileNotFoundError:
     print("Could not read the header file")
+
+try:
+    wrapper.append(open("./parts/wrappers/footer.html", "r").read())
+    print("The footer file was read")
+
+except FileNotFoundError:
+    print("Could not read the footer file")
 
 # List of all the files that we are going to create
 indexs = []
