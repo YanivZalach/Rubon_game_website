@@ -121,6 +121,24 @@ h2,
 	padding: var(--biger-text) var(--mid-text);
 	width: calc(100vw, - var(--mid-text));
 	text-align: center;
+	/* Making a visual affect for changing the feedback */
+	animation: colorChange 4s infinite alternate;  /* The seconds are synchronized to the JS file */
+}
+
+/* The transition */
+@keyframes colorChange {
+  0% {
+    background-color: var(--white-text-color);
+  }
+  30% {
+    background-color: var(--white-2);
+  }
+  70% {
+    background-color: var(--white-3);
+  }
+  100% {
+    background-color: var(--white-4);
+  }
 }
 
 /* Making the feedback to be a flex */

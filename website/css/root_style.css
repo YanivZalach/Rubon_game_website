@@ -15,6 +15,11 @@
 	--black-text-color: rgba(10,10,10);
 	--text-color: #330454;
 	--bakcground-color: #ebdab0;
+	/* Transition color */
+	--white-2: #faf7f0;
+	--white-3: #faf5e8;
+	--white-4: #faf3de;
+
 
 	--nav-color: #2e2412;
 	--nav-text-color: #e3c1f5;
