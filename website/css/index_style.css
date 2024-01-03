@@ -1,0 +1,90 @@
+/* The opening page */
+#IndexOpenPage{
+	/* The background image */
+	background-image: url("https://static.wixstatic.com/media/f0a51f_b8432fa2ecfa43cfbc616ecd903f29a0~mv2.jpg/v1/fill/w_1077,h_752,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f0a51f_b8432fa2ecfa43cfbc616ecd903f29a0~mv2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* The size 70% of the screen size */
+    height: 70vh;
+	/* Make it a flex box */
+	text-align: center;
+	display: flex; /* Use flex container */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+	gap: calc(var(--headr-li-spacing) * 3);
+}
+
+/* So the screen will show all the content */
+@media only screen and (max-height: 540px){
+	#IndexOpenPage{
+		height: fit-content;
+	}
+}
+
+/* The creator name */
+#IndexName{
+	/* size */
+	font-size: var(--big-text);
+	/* Coloring */
+	background-color: var(--black-text-color) ;
+	color: var(--white-text-color);
+	/* Fitting */
+	max-width: fit-content;
+	text-align: center;
+	padding: calc(var(--small-text) / 1.2);
+	border-radius: calc(var(--small-text) / 3);
+}
+
+/* The logo */
+img[alt="rubon_logo"]{
+	width: min(90vw, 600px);
+}
+
+/* The buy now button in the index */
+#IndexBuyNow{
+	/* size */
+	padding: calc(var(--small-text) / 1.2);
+	font-size: var(--big-text);
+}
+
+/* The text area */
+#IndexMainText{
+	/* Background */
+	background-image: url("https://static.wixstatic.com/media/f0a51f_13dedc995dae48a78817cd47315641b3~mv2.jpg/v1/fill/w_1077,h_895,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/f0a51f_13dedc995dae48a78817cd47315641b3~mv2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	/* Text */
+	font-size: var(--mid-text);
+	color: var(--white-text-color);
+	padding: var(--biger-text) var(--mid-text);
+	width: calc(100vw, - var(--mid-text));
+}
+
+/* The benefits area */
+#IndexBenText{
+	/* Background */
+	background-image: url("https://static.wixstatic.com/media/11062b_3a92ffe52a694b8590d7055debd3e2d6~mv2.jpg/v1/fill/w_1077,h_895,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_3a92ffe52a694b8590d7055debd3e2d6~mv2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	/* Fitting */
+	padding: var(--biger-text) var(--mid-text);
+	width: calc(100vw, - var(--mid-text));
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+#IndexBenText h2 {
+	/* Text */
+	font-size: var(--mid-text);
+	color: var(--black-text-color);
+}
+#IndexBenText p {
+
+}

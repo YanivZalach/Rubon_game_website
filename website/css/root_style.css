@@ -10,6 +10,7 @@
 	--small-text: 0.7rem;
 	/* Color */
 	--white-text-color: #fcfcfc;
+	--black-text-color: rgba(10,10,10,0.85);
 	--text-color: #330454;
 	--bakcground-color: #ebdab0;
 
@@ -50,18 +51,32 @@ html {
 /* ----------- Main ----------- */
 /* Images */
 img {
-	/* So the images will fit the screen */
-	width: 100%;
+	/* So the images will not overflow the screen */
+	max-width: 100%;
 }
 
-main {
+/* The pages */
+body {
+	/* Background color */
 	background-color: var(--bakcground-color);
 }
 
+/* Making the links more modern */
+a {
+	text-decoration: none;
+}
+
+/* Divs for reading */
 div {
-	border: 1px solid black;
-	margin: 10px;
+	/*border: 10px solid black;  For debugging */
+	/* Basic color of the website for the text */
 	color: var(--text-color);
-	background-color: var(--bakcground-color);
 }
 
+/* If needed in the future */
+/* Making the divs to be spacey */
+/* Making the divs to take the width */
+/*
+padding: var(--mid-text);
+width: calc(100vw, - var(--mid-text));
+*/

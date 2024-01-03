@@ -78,7 +78,7 @@ nav a:hover {
 }
 
 /* ID: Buy now */
-#NavBuyNow{
+.BuyNow{
 	/* Margin */
 	margin: calc(var(--small-text)/2);
 	/* Border */
@@ -92,7 +92,7 @@ nav a:hover {
 }
 
 /* Hovering ID: Buy now */
-#NavBuyNow:hover{
+.BuyNow:hover{
 	/* Button color */
 	color: var(--button-color);
 	background-color: var(--button-text-color);
@@ -131,6 +131,8 @@ footer {
 	padding: 1%;
 	/* Transition time */
 	transition: background-color calc(2 * var(--transition-time)) linear, color calc(2 * var(--transition-time)) linear; /* Smooth color transition on hover */
+	/* Making the footer to be at the bottom of the page */
+	margin-top: auto;
 }
 
 /* Hovering on the footer */
@@ -138,4 +140,12 @@ footer:hover{
 	/* Reversing the colors */
 	color: var(--text-color);
 	background-color: var(--bakcground-color);
+}
+
+/* PAY ATTENTION - there is anter setting for the body - in the root style file */
+body{
+	/* Making the footer to be at the bottom of the page */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
