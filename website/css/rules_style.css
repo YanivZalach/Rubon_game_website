@@ -38,6 +38,8 @@ main{
 	color: var(--text-color);
 	/* Transition */
 	transition: background-color var(--transition-time), color var(--transition-time); /* Smooth color transition on hover */
+	/* Border */
+	border: solid var(--text-color) calc(var(--small-text) / 4);
 }
 
 #RulesA:hover{
