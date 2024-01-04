@@ -68,6 +68,12 @@ body {
 	background-color: var(--bakcground-color);
 }
 
+/* The main content */
+main{
+	word-spacing: calc(var(--small-text) / 2) ;
+	line-height: var(--biger-text);
+}
+
 /* Making the links more modern */
 a {
 	text-decoration: none;

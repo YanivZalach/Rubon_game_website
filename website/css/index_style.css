@@ -122,24 +122,11 @@ h2,
 	width: calc(100vw, - var(--mid-text));
 	text-align: center;
 	/* height */
-	height: 50vh;
+	height: fit-content;
 	/* Making a visual affect for changing the feedback */
 	animation: colorChange 4s infinite alternate;  /* The seconds are synchronized to the JS file */
 }
 
-/* Making the height of feedback consistent */
-@media only screen and (max-width:670px){ /* This is a breaking point */
-	#IndexFeedback{
-		/* height */
-		height: 60vh;
-	}
-}
-@media only screen and (max-width:430px){ /* This is a breaking point */
-	#IndexFeedback{
-		/* height */
-		height: fit-content;
-	}
-}
 
 /* The transition */
 @keyframes colorChange {

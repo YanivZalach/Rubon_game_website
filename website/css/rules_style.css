@@ -1,0 +1,78 @@
+/* The rules page */
+
+/* Making the page to a flexbox for ease of use */
+main{
+	/* Making to a flexbox */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* The text */
+#RulesHead{
+	/* Text */
+	font-size: var(--big-text);
+	color: var(--black-text-color);
+	/* Adding padding */
+	padding: var(--big-text);
+	/* Width */
+	width: 90vw;
+	/* Border */
+	border-bottom: solid calc(var(--headr-li-spacing) / 4) var(--black-color);
+}
+#RulesContant,
+#RulesA{
+	/* Text */
+	font-size: var(--mid-text);
+	color: var(--black-text-color);
+	/* Adding padding */
+	padding: var(--mid-text);
+	margin: var(--mid-text);
+	/* Border-radius */
+	border-radius: var(--small-text);
+}
+#RulesA {
+	/* Color */
+	color: var(--text-color);
+	/* Transition */
+	transition: background-color var(--transition-time), color var(--transition-time); /* Smooth color transition on hover */
+}
+
+#RulesA:hover{
+	/* Inverting the colors */
+	background-color: var(--text-color);
+	color: var(--bakcground-color);
+}
+
+
+/* The pdf rules */
+#RulesPdf{
+	/* Fitting */
+	text-align: center;
+	border: none;
+	width: 90vw;
+	height: 90vh;
+	/* Make it show */
+	display: block;
+	/* No padding, only at the bottom */
+	padding: 0px;
+	padding-bottom: var(--big-text);
+
+}
+/* Make it not to big */
+@media only screen and (min-width:700px){
+	#RulesPdf{
+		width: 80vw;
+	}
+}
+/* If on small screen, we make it full width*/
+@media only screen and (min-width:400px){
+	#RulesPdf{
+		/* Hide the scrollbar */
+		overflow: hidden;
+		width: 95vw;
+	}
+}
+
