@@ -31,7 +31,6 @@ main{
 	margin: var(--mid-text);
 	/* Border-radius */
 	border-radius: var(--small-text);
-	/* Word wrap for email to fit */
 }
 
 /* How to contact itself */
