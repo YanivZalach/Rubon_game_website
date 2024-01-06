@@ -2,84 +2,97 @@
 
 /* Making the page to a flexbox for ease of use */
 main {
-  /* Making it a flexbox */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	/* Making it a flexbox */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /* The head */
 #AboHead {
-  /* Text */
-  font-size: var(--big-text);
-  color: var(--black-text-color);
-  text-align: center;
-  /* Adding padding */
-  padding: var(--big-text);
-  /* Width */
-  width: 90vw;
-  /* Border */
-  border-bottom: solid calc(var(--headr-li-spacing) / 4) var(--black-color);
+	/* Text */
+	font-size: var(--big-text);
+	color: var(--black-text-color);
+	text-align: center;
+	/* Adding padding */
+	padding: var(--big-text);
+	/* Width */
+	width: 90vw;
+	/* Border */
+	border-bottom: solid calc(var(--headr-li-spacing) / 4) var(--black-color);
 }
 
 /* The content area */
 #AboCon {
-  /* Making it an inline flexbox */
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  /* Adding padding */
-  padding: var(--mid-text);
-  margin: var(--mid-text);
+	/* Making it an inline flexbox */
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/* Adding padding */
+	padding: var(--mid-text);
+	margin: var(--mid-text);
 }
 
 /* The text */
 #AboTex {
-  /* Text */
-  font-size: var(--mid-text);
-  color: var(--black-text-color);
-  /* Adding padding */
-  padding: var(--mid-text);
-  margin: var(--mid-text);
-  /* Border-radius */
-  border-radius: var(--small-text);
-  /* Making it inline */
-  display: inline;
-  /* Making them flex */
-  flex: 1;
+	/* Text */
+	font-size: var(--mid-text);
+	color: var(--black-text-color);
+	/* Adding padding */
+	padding: var(--mid-text);
+	margin: var(--mid-text);
+	/* Border-radius */
+	border-radius: var(--small-text);
+	/* Making it inline */
+	display: inline;
+	/* Making them flex */
+	flex: 1;
 }
 
 /* The img */
 #AboImg {
-  /* Size */
-  width: 40vw;
-  /* Border */
-  border: solid calc(var(--headr-li-spacing) / 3) var(--black-color);
-  border-radius: var(--small-text);
-  /* Margin */
-  margin-top: var(--mid-text);
-  /* Making them flex */
-  flex: 1;
+	/* Size */
+	width: 40vw;
+	/* Border */
+	border: solid calc(var(--headr-li-spacing) / 3) var(--black-color);
+	border-radius: var(--small-text);
+	/* Margin */
+	margin-top: var(--mid-text);
+	/* Making them flex */
+	flex: 1;
 }
 
 /* Media query for screens under 750px */
 @media (max-width: 750px) {
-  /* Change #AboCon to a flex container */
-  #AboCon {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Reset the flex properties for #AboTex and #AboImg */
-  #AboTex, #AboImg {
-    flex: none; /* Resetting the flex property */
-  }
+	/* Change #AboCon to a flex container */
+	#AboCon {
+		display: flex;
+		flex-direction: column;
+		/* Padding */
+		margin: 0px;
+		padding: 0px;
+		margin-bottom: var(--mid-text);
+	}
 
-  /* Making the Img to be bigger */
-  #AboImg{
-	  width: 90vw;
-  }
+	/* Reset the flex properties for #AboTex and #AboImg */
+	#AboTex, #AboImg {
+		flex: none; /* Resetting the flex property */
+	}
+	#AboTex{
+		padding: 0px;
+	}
+
+	/* Making the Img to be bigger */
+	#AboImg{
+		width: 90vw;
+	}
 }
 
+/* Making the font size smaller for smaller screen */
+@media only screen and (max-width: 400px){
+	#AboTex{
+		font-size: var(--s-mid-text);
+	}
+}

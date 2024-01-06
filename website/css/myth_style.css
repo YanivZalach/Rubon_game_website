@@ -1,0 +1,114 @@
+/* The rules page */
+
+/* Making the page a flexbox for ease of use */
+main {
+	/* Making it a flexbox */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* The head */
+#MythHead{
+	/* Fit */
+	background-color: var(--black-color);
+	width: 100%;
+	border-top: solid calc(var(--small-text) / 4) var(--white-color);
+}
+
+/* The head content */
+#MythHead div,
+#MythHead h1{
+	/* Color */
+	color: var(--white-text-color);
+	/* Location */
+	text-align: center;
+	padding: 3vw;
+}
+
+#MythHead h1{
+	font-size: var(--biger-text);
+}
+
+/* Making the units a flexbox for ease of use */
+.MythAol {
+	/* Making it a flexbox */
+	display: flex;
+	flex-direction: row; /* Set to row layout for image and Writing to be in the same row */
+	justify-content: stretch;
+	align-items: center;
+	/* Size */
+	width: 100%;
+	height: auto; /* Adjusted to auto to allow images to stretch to their maximum height */
+}
+
+/* Borders */
+.Img,
+.Writing {
+	border-top: solid calc(var(--small-text) / 4) var(--black-text-color);
+}
+
+/* Make the image and the Writing to be 1:1 */
+.Img {
+	/* Size */
+	flex: 1; /* Adjusted to allow images to stretch to their maximum height */
+	/* Centering */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	align-self: stretch;
+	/* Color */
+	background-color: #9967DB;
+	overflow: hidden; /* Hide overflow if the image exceeds its container */
+}
+
+.Img img {
+	max-width: 100%; /* Ensure the image doesn't exceed its container */
+	align-self: center; /* Vertically center the image within its container */
+}
+
+.Writing {
+	/* Adjusted to 100% width */
+	width: 55vw; /* Set to the same width as the image */
+	/* Adding some padding or styling as needed */
+	padding: 5vw;
+}
+
+/* On a smartphone screen */
+@media only screen and (max-width: 800px) {
+	/* Adjust styles for smaller screens */
+	.MythAol {
+		flex-direction: column;
+	}
+	.Img{
+		width: 100%; /* Adjust the width for smaller screens */
+	}
+	.Writing {
+		width: 90%; /* Adjust the width for smaller screens */
+		border: none; /* Removing the border */
+	}
+}
+
+
+/* The text style */
+.Text{
+	/* Font settings */
+	font-size: var(--mid-text);
+	color: var(--black-text-color);
+}
+.Writing h2{
+	/* Font settings */
+	font-size: var(--big-text);
+	/* Location */
+	text-align: center;
+}
+
+@media only screen and (max-width:400px){
+	/* Making the font size smaller for smaller screen */
+	.Text{
+		font-size: var(--s-mid-text);
+	}
+}
+

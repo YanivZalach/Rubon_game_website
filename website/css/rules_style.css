@@ -77,4 +77,9 @@ main{
 		width: 95vw;
 	}
 }
-
+@media only screen and (max-width:400px){
+	/* Making the font size smaller for smaller screen */
+	#RulesContant{
+		font-size: var(--s-mid-text);
+	}
+}
