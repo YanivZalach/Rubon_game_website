@@ -1,0 +1,4 @@
+[submodule "website"]
+	path = website
+	url = git@github.com:YanivZalach/rubongame.github.io.git
+	branch = main
