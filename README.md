@@ -4,6 +4,10 @@ Rubon is a strategy game i created.
 
 This repository contains the build code for the *Rubon game* website.
 
+## The Website Link
+
+[The Rubon Game](https://rubongame.com/)
+
 ## Building the website
 
 To build the html pages for the website, after `cd` to `./make_html`, run the following commend:
