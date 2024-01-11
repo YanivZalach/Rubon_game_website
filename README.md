@@ -26,3 +26,6 @@ python3 bulid.py
 
 The website is hosted at the following repository: [rubongame.github.io](https://github.com/YanivZalach/rubongame.github.io/)
 
+## Limits
+
+The website has a limit of smaller then `width: 220px` to stop rendering the pages correctly.
