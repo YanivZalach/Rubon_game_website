@@ -15,6 +15,9 @@ wrapper = []
 # List of all the files that we are going to create
 indexs = []
 
+# List of all the titles of the website
+titles = []
+
 try:
     wrapper.append(open("./parts/wrappers/header.html", "r").read())
     print("The header file was read")
@@ -35,6 +38,7 @@ for root, dirs, files in os.walk("./parts/indexs"):
     for name in files:
         try:
             indexs.append([name,open(os.path.join(root, name), "r").read()])
+            titles.append([name, open(os.path.join(root, name), "r").readlines()[1].strip()])  # Read the second row of the file and remove any newline characters or extra whitespaces at the beginning or end.
             print(f"The content of {name} was read")
         except FileNotFoundError:
             print(f"Could not read the content of {name}")
@@ -61,7 +65,6 @@ for file_combo in indexs:
     except Exception as e:
         print(f"Could not create '{name}' - {type(e).__name__}")
 
-
 # Printing to the user that we are adding the personal stylesheet
 print("\nAdding personal stylesheet",end='\n\n')
 
@@ -83,6 +86,26 @@ for file_combo in indexs:
 
     except Exception as e:
         print(f"Could not find the index comment in '{name}' - {type(e).__name__}")
+
+# Printing to the user that we add the page title
+print("\nAdding personal title",end='\n\n')
+
+# Adding personal title (the second row in each index file)
+for file_combo,title_combo in zip(indexs,titles):
+    # The title and the file content from the file_combo
+    title = title_combo[1]
+    content = file_combo[1]
+
+    # Adding the stylesheet
+    try:
+        # Locating the place to add the title: `<!-- Insert title -->`
+        add_index = content.find('<!-- Insert title -->')
+        # Adding to the content
+        file_combo[1]=content[:add_index] +f'<title>{title}</title>\n' + content[add_index:]
+        print(f"Added the title of {title}")
+
+    except Exception as e:
+        print(f"Could not find the index comment in '{title}' - {type(e).__name__}")
     
 
 
